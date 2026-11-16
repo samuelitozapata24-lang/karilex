@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Karilex Juguetería | Juguetes Montessori de madera</title>
+<meta name="description" content="Sets Montessori, andadores de madera, bloques, juguetes sensoriales y libros para bebés y niños. Precios en córdobas.">
+<meta name="color-scheme" content="light">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#1c1b2e;--sun:#f7c531;--wood:#d8b07a;--woodd:#b98a52;--hole:#8a6334;--red:#e4472b;--blue:#2b4fd8;--green:#1f9d6b;--mute:#5d5b70;--line:#e7e5ee;--u:88px;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:'Bricolage Grotesque',system-ui,sans-serif;color:var(--ink);background:#fff;line-height:1.5}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
+.top{display:flex;justify-content:space-between;align-items:center;padding:18px clamp(20px,5vw,64px);background:var(--sun)}
+.logo{font-weight:800;font-size:1.35rem;letter-spacing:-.02em;text-decoration:none}
+.btn{display:inline-block;background:var(--ink);color:#fff;font-weight:600;font-size:1rem;line-height:1;padding:14px 22px;border-radius:999px;text-decoration:none}
+.btn:hover{background:var(--blue)}
+.hero{background:var(--sun);padding:clamp(24px,6vw,72px) clamp(20px,5vw,64px) clamp(48px,8vw,96px);display:grid;grid-template-columns:1.15fr 1fr;gap:48px;align-items:center}
+h1{font-size:clamp(2.6rem,7vw,5.6rem);line-height:.95;letter-spacing:-.04em;font-weight:800;margin:0 0 24px;max-width:11ch}
+.hero p{font-size:1.2rem;max-width:34ch;margin:0 0 32px}
+.stage{justify-self:center;text-align:center}
+.board{background:var(--wood);border-radius:28px;padding:28px;box-shadow:0 10px 0 var(--woodd);display:flex;gap:20px}
+.hole,.shape,.slot{width:var(--u);height:var(--u)}
+.hole{background:var(--hole)}
+.shapes{display:flex;gap:20px;justify-content:center;margin-top:44px}
+.shape{display:block;border:0;padding:0;cursor:pointer;transition:transform .55s cubic-bezier(.3,1.4,.5,1)}
+.circle{border-radius:50%}.square{border-radius:8px}
+.tri{clip-path:polygon(50% 6%,96% 92%,4% 92%)}
+#msg{min-height:1.6em;margin:22px 0 0;font-weight:600}
+.cat{padding:clamp(40px,7vw,88px) clamp(20px,5vw,64px);max-width:1100px;margin:auto}
+h2{font-size:clamp(2rem,4.5vw,3.2rem);letter-spacing:-.03em;line-height:1;margin:0 0 8px;font-weight:800}
+.sub{color:var(--mute);margin:0 0 28px}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:24px}
+.chip{display:flex;align-items:center;gap:8px;font-family:inherit;font-weight:600;font-size:.95rem;line-height:1.2;padding:10px 16px;border-radius:999px;border:2px solid var(--ink);background:#fff;color:var(--ink);cursor:pointer}
+.chip[aria-pressed=true]{background:var(--ink);color:#fff}
+.mk{display:inline-block;width:20px;height:20px;background:var(--c);flex:none}
+.mk.circle{border-radius:50%}.mk.square{border-radius:3px}.mk.tri{clip-path:polygon(50% 6%,96% 92%,4% 92%)}
+.mk.half{height:10px;border-radius:20px 20px 0 0}.mk.dia{transform:rotate(45deg) scale(.72)}.mk.pill{height:11px;border-radius:9px}.mk.tall{width:12px}
+.row{display:grid;grid-template-columns:36px 1fr auto;gap:8px 20px;align-items:start;padding:22px 0;border-top:1px solid var(--line)}
+.row .mk{margin-top:6px}
+.row h3{margin:0 0 4px;font-size:1.2rem;letter-spacing:-.01em}
+.row p{margin:0;color:var(--mute);max-width:62ch}
+.age{display:inline-block;margin-top:8px;font-size:.85rem;font-weight:600;background:var(--sun);padding:2px 10px;border-radius:99px}
+.buy{text-align:right}
+.price{font-size:1.6rem;font-weight:800;letter-spacing:-.02em;white-space:nowrap}
+.buy .btn{margin-top:8px;padding:10px 18px;font-size:.95rem}
+footer{background:var(--ink);color:#fff;padding:48px clamp(20px,5vw,64px)}
+footer b{font-size:1.4rem}
+footer p{margin:8px 0 0;color:#cfcde0}
+@media(max-width:760px){.hero{grid-template-columns:1fr}:root{--u:72px}.row{grid-template-columns:28px 1fr}.buy{grid-column:2;text-align:left;display:flex;align-items:center;gap:16px}.buy .btn{margin:0}}
+@media(prefers-reduced-motion:reduce){.shape{transition:none}html{scroll-behavior:auto}}
+
+.row{grid-template-columns:120px 1fr auto}
+.ph{margin:0}.ph>a>img{display:block;width:100%;aspect-ratio:1;object-fit:contain;background:#fff;border:1px solid var(--line);border-radius:14px}
+.th{display:flex;gap:6px;margin-top:6px}.th button{padding:0;border:1px solid var(--line);border-radius:8px;background:#fff;cursor:pointer;width:38px;height:38px;overflow:hidden}.th button[aria-current=true]{border:2px solid var(--ink)}.th img{width:100%;height:100%;object-fit:contain;display:block}
+.row .mk{display:inline-block;margin:0 8px 0 0;vertical-align:-2px}
+.band{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;max-width:1100px;margin:0 auto;padding:clamp(24px,5vw,64px) clamp(20px,5vw,64px) clamp(48px,7vw,96px)}
+.band img{width:100%;height:auto;border-radius:28px;display:block}.band p{max-width:34ch;margin:0 0 24px;font-size:1.15rem}
+@media(max-width:760px){.row{grid-template-columns:92px 1fr}.buy{grid-column:1 / -1}.band{grid-template-columns:1fr}}
+.tl{color:inherit;text-decoration:none}.tl:hover{text-decoration:underline}
+.ph>a{display:block}
+.is-det .hero,.is-det .cat,.is-det .band{display:none}
+.det{max-width:1100px;margin:auto;padding:24px clamp(20px,5vw,64px) 72px}
+.back{display:inline-block;margin-bottom:20px;font-weight:600;text-decoration:none;border-bottom:2px solid var(--ink)}
+.dg{display:grid;grid-template-columns:1.1fr 1fr;gap:clamp(24px,5vw,56px);align-items:start}
+.gal>img{display:block;width:100%;aspect-ratio:1;object-fit:contain;background:#fff;border:1px solid var(--line);border-radius:24px}
+.gal .th{gap:10px;margin-top:12px}.gal .th button{width:68px;height:68px;border-radius:12px}
+.cl{display:flex;align-items:center;gap:8px;margin:0 0 8px;color:var(--mute);font-weight:600}
+.dt{font-size:clamp(1.8rem,4vw,2.9rem);line-height:1.05;max-width:none;margin:0 0 16px}
+.dp{font-size:clamp(2.4rem,6vw,3.6rem);font-weight:800;letter-spacing:-.03em;line-height:1;margin-bottom:12px}
+.dd{font-size:1.1rem;color:var(--mute);margin:16px 0 28px;max-width:52ch}
+.info .btn{padding:16px 28px}
+.rh{font-size:1.6rem;margin:56px 0 16px}
+.rel{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:16px}
+.rel a{text-decoration:none;display:flex;flex-direction:column;gap:4px}.rel img{width:100%;aspect-ratio:1;object-fit:contain;background:#fff;border:1px solid var(--line);border-radius:14px}.rel b{font-size:.95rem;line-height:1.25}.rel span{color:var(--mute);font-weight:600}
+@media(max-width:760px){.dg{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header class="top"><a class="logo" href="#">Karilex</a><a class="btn" href="#catalogo">Ver catálogo</a></header>
+<section class="hero">
+<div>
+<h1>Juguetes de madera para aprender jugando</h1>
+<p>Sets Montessori, andadores, bloques y libros para bebés y niños. Elige, toca Pedir y te escribimos por WhatsApp.</p>
+<a class="btn" href="#catalogo">Ver los 25 productos</a>
+</div>
+<div class="stage">
+<div class="board" aria-hidden="true"><div class="hole circle"></div><div class="hole square"></div><div class="hole tri"></div></div>
+<div class="shapes">
+<div class="slot"><button class="shape circle" style="background:var(--red)" aria-label="Círculo rojo: toca para encajarlo"></button></div>
+<div class="slot"><button class="shape square" style="background:var(--blue)" aria-label="Cuadrado azul: toca para encajarlo"></button></div>
+<div class="slot"><button class="shape tri" style="background:var(--green)" aria-label="Triángulo verde: toca para encajarlo"></button></div>
+</div>
+<p id="msg" aria-live="polite">Toca una forma para encajarla.</p>
+</div>
+</section>
+<main class="cat" id="catalogo">
+<h2>Catálogo</h2>
+<p class="sub">Precios en córdobas (C$).</p>
+<div class="chips" id="chips"></div>
+<div id="list"></div>
+</main>
+<section class="det" id="det" hidden></section>
+<section class="band"><img src="imagenes/banner-bebe-con-juguetes.webp" alt="Bebé sonriendo sentado entre juguetes Montessori de colores" width="900" height="600" loading="lazy"><div><h2>Cada juguete trabaja una habilidad</h2><p>Apilar, clasificar, encajar, escuchar y caminar: elige por edad y escríbenos para pedir.</p><a class="btn" id="wa" target="_blank" rel="noopener" href="#">Pedir por WhatsApp</a></div></section>
+<footer><b>Karilex Juguetería</b><p>Juguetes Montessori para bebés y niños. Pedidos por WhatsApp.</p></footer>
+<script>
+const WA="50586880192"; // Número de WhatsApp con código de país, sin + ni espacios. Ej: "505XXXXXXXX"
+const K={"Sets y juegos Montessori":["circle","#e4472b"],"Andadores de madera":["square","#2b4fd8"],"Bloques de construcción":["tri","#1f9d6b"],"Juguetes para bebés":["half","#e0538a"],"Juguetes sensoriales":["dia","#7b4fd8"],"Juguetes educativos":["pill","#e07b12"],"Libros y tarjetas":["tall","#0e8fa8"]};
+const P=[["Sets y juegos Montessori","Set juego completo Montessori 6 en 1","Incluye: apilador de koala, bloques suaves y clasificador de formas.",2500,"",["imagenes/producto-01-set-juego-completo-montessori-1.webp"]],["Bloques de construcción","Bloques de construcción magnéticos","Para niños de 3 a 12 años.",1800,"3–12 años",["imagenes/producto-02-bloques-de-construccion-magneticos-1.webp","imagenes/producto-02-bloques-de-construccion-magneticos-2.webp"]],["Sets y juegos Montessori","Set juego completo Montessori 7 en 1","Construye, apila y explora con 7 juguetes esenciales: bloques apilables, anillos, tazas, girador de succión, clasificador de madera, contenedor sensorial y bolsa de almacenamiento.",2500,"",["imagenes/producto-03-set-juego-completo-montessori-1.webp"]],["Sets y juegos Montessori","Set para bebé Montessori 9 en 1","Para bebés de 6 a 12 meses. Incluye: bloques de construcción suaves, anillos apilables suaves, 6 huevos a juego, sonajero agitador, juguete de dentición, rompecabezas de clasificación y apilamiento de madera, juguete de cuerda y cubo sensorial explorador con 6 bloques.",2500,"6–12 meses",["imagenes/producto-04-set-para-bebee-montessori-1.webp"]],["Sets y juegos Montessori","Set de juguetes Montessori de madera 8 en 1","Rompecabezas de alfabeto, números y formas, xilófono, laberinto de cuentas y caja compacta.",1800,"",["imagenes/producto-05-set-dejuguetes-montessori-de-madera-1.webp"]],["Sets y juegos Montessori","Set de juguetes Montessori de madera 8 en 1 (preescolar)","Juego de aprendizaje preescolar con rompecabezas de números, xilófono, reloj y clasificador de formas.",1800,"",["imagenes/producto-06-set-dejuguetes-montessori-de-madera-1.webp"]],["Andadores de madera","Andador de madera Montessori (cuento de hadas del bosque)","Juguete de madera para caminar con altura y velocidad ajustables, freno, centro de juego con almacenamiento y multiactividad.",3900,"",["imagenes/producto-07-andador-de-madera-montessori-1.webp","imagenes/producto-07-andador-de-madera-montessori-2.webp"]],["Andadores de madera","Andador de madera Montessori de empuje","Andador de empuje para bebé con velocidad ajustable, juegos sensoriales de mano y juguetes de empuje para caminar.",3900,"",["imagenes/producto-08-andador-de-madera-montessori-1.webp","imagenes/producto-08-andador-de-madera-montessori-2.webp"]],["Andadores de madera","Andador de madera Montessori con ruedas","Caminador sentado a pie con ruedas para bebés de 6 a 12 meses, con centro de actividades.",3900,"6–12 meses",["imagenes/producto-09-andador-de-madera-montessori-1.webp","imagenes/producto-09-andador-de-madera-montessori-2.webp"]],["Andadores de madera","Andador de madera Montessori con barras de xilófono","Andador de empuje con barras de xilófono, engranajes giratorios, laberinto de cuentas, reloj y clasificación de formas.",3900,"",["imagenes/producto-10-andador-de-madera-montessori-1.webp","imagenes/producto-10-andador-de-madera-montessori-2.webp"]],["Juguetes educativos","Juguetes de cuentas Montessori de madera 3 en 1","Clasificación de colores, apilamiento, forma geométrica y juego de cuentas de secuenciación.",1600,"",["imagenes/producto-11-juguetes-de-cuentas-montessori-de-madera-1.webp"]],["Juguetes para bebés","Juguetes Montessori para bebés 6 en 1","Para bebés de 0 a 12 meses. Incluye: bloques de apilamiento suaves, anillos apilables, spinners, bola de dentición, cubo clasificador de formas y rompecabezas de formas de madera.",2500,"0–12 meses",["imagenes/producto-12-juguetes-montessori-1.webp"]],["Juguetes educativos","Caja de pañuelos Montessori 8 en 1","Para niños de más de 1 año. Incluye: cosecha de zanahorias, juego de caja de pañuelos, combinación de formas de animales, captura de insectos, reloj de aprendizaje, engranajes giratorios, diapositivas de bloques y reconocimiento de animales y números.",2000,"Desde 1 año",["imagenes/producto-13-caja-de-panuelos-montessori-1.webp"]],["Juguetes educativos","Mesa de actividad Montessori de madera 8 en 1","Incluye: laberinto de cuentas, pesca, clasificador de formas, engranajes giratorios, sonajero rodante, bloque giratorio, juego deslizante y caja de música.",2200,"",["imagenes/producto-14-mesa-de-actividad-montessori-de-madera-1.webp"]],["Juguetes sensoriales","Juguetes sensoriales Montessori","Para bebés de 6 a 12 meses. Cada uno de los 6 lados interactivos cuenta con una actividad única para estimular al bebé.",1200,"6–12 meses",["imagenes/producto-15-juguetes-sensoriales-montessori-1.webp"]],["Libros y tarjetas","Libro de tela suave para bebé","Para bebés de 0 a 12 meses.",750,"0–12 meses",["imagenes/producto-16-libros-de-tela-suave-para-bebe-1.webp"]],["Libros y tarjetas","Libro de tela irrompible","Libro de 6 páginas para educación temprana. Primer libro para bebés de 0 a 2 años.",850,"0–2 años",["imagenes/producto-17-libro-de-tela-irrompible-1.webp"]],["Juguetes educativos","Tablero multifuncional","Emparejamiento de colores y formas con 6 efectos de sonido diferentes, canciones, música, reconocimiento de números y entrenamiento de concentración.",950,"",["imagenes/producto-18-tablero-multifincional-1.webp"]],["Juguetes sensoriales","Juguete educativo sensorial","Para educación temprana de bebés. Incluye set de frutas para el entrenamiento de la concentración.",850,"",["imagenes/producto-19-juguete-educativo-sensorial-1.webp","imagenes/producto-19-juguete-educativo-sensorial-2.webp"]],["Juguetes sensoriales","Set de frutas de madera","Set de frutas de madera para educación temprana.",1500,"",["imagenes/producto-20-set-de-frutas-de-madera-1.webp"]],["Juguetes para bebés","Juguetes de dentición","Juguetes de masticación de silicona con forma de control de juego, para estimulación sensorial de bebés de 6 a 12 meses.",650,"6–12 meses",["imagenes/producto-21-juguetes-de-denticion-1.webp"]],["Juguetes sensoriales","Bloques de construcción sensoriales de madera","Experiencia sensorial con bloques de madera que contienen elementos coloridos en su interior: piezas transparentes, líquidos, cuentas o arena.",1500,"",["imagenes/producto-22-bloques-de-construccion-sensoriales-de-madera-1.webp"]],["Libros y tarjetas","Libros con pegatinas","Libros educativos de actividades para educación temprana.",500,"",["imagenes/producto-23-libros-con-pegatinas-1.webp"]],["Libros y tarjetas","Tarjetas de estimulación visual de alto contraste","Tarjetas de entrenamiento y seguimiento visual para recién nacidos.",350,"Recién nacidos",["imagenes/producto-24-tarjetas-de-estimulacion-visual-de-alto-contr-1.webp"]],["Sets y juegos Montessori","Set de juguetes Montessori de madera (3 a 5 años)","Actividades de aprendizaje de clasificación de colores y juguetes sensoriales para desarrollar habilidades motoras finas.",850,"3–5 años",["imagenes/producto-25-set-de-juguetes-montessori-de-madera-1.webp"]]];
+const fmt=n=>"C$"+n.toLocaleString("en-US");
+const esc=s=>s.replace(/"/g,"&quot;");
+const chips=document.getElementById("chips"),list=document.getElementById("list");
+document.getElementById("wa").href=`https://wa.me/${WA}?text=${encodeURIComponent("Hola Karilex, quiero información de los juguetes")}`;
+let cur="Todo";
+function mk(c){const k=K[c];return `<span class="mk ${k[0]}" style="--c:${k[1]}"></span>`}
+function draw(){
+  chips.innerHTML=["Todo",...Object.keys(K)].map(c=>{
+    const n=c=="Todo"?P.length:P.filter(p=>p[0]==c).length;
+    return `<button class="chip" aria-pressed="${c==cur}" data-c="${c}">${c=="Todo"?"":mk(c)}${c} (${n})</button>`}).join("");
+  list.innerHTML=P.map((p,i)=>[p,i]).filter(([p])=>cur=="Todo"||p[0]==cur).map(([p,i])=>{
+    const t=encodeURIComponent(`Hola Karilex, quiero pedir: ${p[1]} (${fmt(p[3])})`),im=p[5];
+    const th=im.length>1?`<div class="th">${im.map((s,k)=>`<button type="button" data-src="${s}" aria-label="Ver foto ${k+1} de ${esc(p[1])}" aria-current="${k==0}"><img src="${s}" alt="" loading="lazy"></button>`).join("")}</div>`:"";
+    return `<article class="row"><figure class="ph"><a href="#producto-${i+1}"><img src="${im[0]}" alt="${esc(p[1])}" width="240" height="240" loading="lazy"></a>${th}</figure><div><h3>${mk(p[0])}<a class="tl" href="#producto-${i+1}">${p[1]}</a></h3><p>${p[2]}</p>${p[4]?`<span class="age">${p[4]}</span>`:""}</div><div class="buy"><div class="price">${fmt(p[3])}</div><a class="btn" target="_blank" rel="noopener" href="https://wa.me/${WA}?text=${t}">Pedir</a></div></article>`}).join("");
+}
+chips.addEventListener("click",e=>{const b=e.target.closest(".chip");if(b){cur=b.dataset.c;draw();chips.querySelector('[aria-pressed="true"]').focus()}});
+list.addEventListener("click",e=>{const b=e.target.closest(".th button");if(!b)return;const f=b.closest(".ph");f.querySelector(":scope>a>img").src=b.dataset.src;f.querySelectorAll(".th button").forEach(x=>x.setAttribute("aria-current",x==b))});
+draw();
+const det=document.getElementById("det"),T0=document.title;let y=null;
+const wl=t=>`https://wa.me/${WA}?text=${encodeURIComponent(t)}`;
+list.addEventListener("click",e=>{if(e.target.closest('a[href^="#producto"]'))y=scrollY});
+det.addEventListener("click",e=>{const b=e.target.closest(".th button");if(!b)return;document.getElementById("big").src=b.dataset.src;det.querySelectorAll(".th button").forEach(x=>x.setAttribute("aria-current",x==b))});
+function show(i){
+  const p=P[i],im=p[5],rel=P.map((q,j)=>[q,j]).filter(([q,j])=>q[0]==p[0]&&j!=i).slice(0,4);
+  det.innerHTML=`<a class="back" href="#catalogo">← Volver al catálogo</a><div class="dg"><div class="gal"><img id="big" src="${im[0]}" alt="${esc(p[1])}" width="560" height="560">${im.length>1?`<div class="th">${im.map((s,k)=>`<button type="button" data-src="${s}" aria-label="Ver foto ${k+1}" aria-current="${k==0}"><img src="${s}" alt="" loading="lazy"></button>`).join("")}</div>`:""}</div><div class="info"><p class="cl">${mk(p[0])}${p[0]}</p><h1 class="dt">${p[1]}</h1><div class="dp">${fmt(p[3])}</div>${p[4]?`<span class="age">${p[4]}</span>`:""}<p class="dd">${p[2]}</p><a class="btn" target="_blank" rel="noopener" href="${wl(`Hola Karilex, quiero pedir: ${p[1]} (${fmt(p[3])})`)}">Pedir por WhatsApp</a></div></div>${rel.length?`<h2 class="rh">Más en ${p[0]}</h2><div class="rel">${rel.map(([q,j])=>`<a href="#producto-${j+1}"><img src="${q[5][0]}" alt="" loading="lazy"><b>${q[1]}</b><span>${fmt(q[3])}</span></a>`).join("")}</div>`:""}`;
+  document.title=p[1]+" | Karilex Juguetería";
+}
+function route(){
+  const m=location.hash.match(/^#producto-(\d+)$/),i=m?m[1]-1:-1,on=!!P[i];
+  document.body.classList.toggle("is-det",on);det.hidden=!on;
+  if(on){show(i);scrollTo(0,0)}
+  else{document.title=T0;if(y!==null){scrollTo(0,y);y=null}else if(location.hash=="#catalogo")document.getElementById("catalogo").scrollIntoView()}
+}
+addEventListener("hashchange",route);route();
+const holes=[...document.querySelectorAll(".hole")],shapes=[...document.querySelectorAll(".shape")],msg=document.getElementById("msg");
+function place(i){
+  const s=shapes[i],h=holes[i].getBoundingClientRect(),r=s.parentElement.getBoundingClientRect();
+  s.style.transform=s.classList.contains("in")?`translate(${h.left-r.left}px,${h.top-r.top}px)`:"none";
+}
+shapes.forEach((s,i)=>s.addEventListener("click",()=>{
+  s.classList.toggle("in");place(i);
+  const n=shapes.filter(x=>x.classList.contains("in")).length;
+  msg.textContent=n==3?"¡Cada forma en su lugar!":n?`${n} de 3 encajadas`:"Toca una forma para encajarla.";
+}));
+addEventListener("resize",()=>shapes.forEach((_,i)=>place(i)));
+</script>
+</body>
+</html>
