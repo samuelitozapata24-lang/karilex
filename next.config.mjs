@@ -8,7 +8,10 @@ const nextConfig = {
   },
   async rewrites() {
     return {
-      beforeFiles: [{ source: '/', destination: '/index.html' }],
+      beforeFiles: [
+        { source: '/', destination: '/index.html' },
+        { source: '/producto/:slug', destination: '/producto/:slug/index.html' },
+      ],
     }
   },
   async headers() {
@@ -20,8 +23,18 @@ const nextConfig = {
       {
         source: '/:path*',
         headers: [
+          {
+            key: 'Content-Security-Policy',
+            value:
+              "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: blob:; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'",
+          },
+          { key: 'X-Frame-Options', value: 'DENY' },
           { key: 'X-Content-Type-Options', value: 'nosniff' },
           { key: 'Referrer-Policy', value: 'strict-origin-when-cross-origin' },
+          {
+            key: 'Permissions-Policy',
+            value: 'camera=(), microphone=(), geolocation=(), payment=(), usb=()',
+          },
           { key: 'Strict-Transport-Security', value: 'max-age=63072000' },
         ],
       },
